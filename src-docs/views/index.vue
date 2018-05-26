@@ -1,5 +1,6 @@
 <template>
   <div>
+      <ui-raised-button @click="test" />
     <div class="mu-banner">
       <img src="/images/bg.png" class="mu-banner-image" width="100%" height="100%"/>
       <div class="mu-logo">
@@ -59,19 +60,29 @@
 </template>
 
 <script>
-import zh from './zh'
-import en from './en'
+/* eslint-disable */
+import zh from "./zh";
+import en from "./en";
 export default {
   locales: {
     zh,
     en
+  },
+  methods: {
+    test() {
+      console.log(this.$message)
+      this.$message({
+        // type: 'warning',
+        text: '1212'
+      })
+    }
   }
-}
+};
 </script>
 
 <style lang="less">
 @import "../../src/styles/vars.less";
-.mu-banner{
+.mu-banner {
   z-index: 100;
   height: 500px;
   display: flex;
@@ -88,13 +99,13 @@ export default {
   bottom: 0;
   z-index: -1;
 }
-.mu-logo{
+.mu-logo {
   width: 120px;
   height: 120px;
   line-height: 100px;
   text-align: center;
   background-color: @alternateTextColor;
-  margin:  0 auto;
+  margin: 0 auto;
   color: @primaryColor;
   font-size: 50px;
   border-radius: 50%;
@@ -108,7 +119,7 @@ export default {
   width: 70%;
   height: 70%;
 }
-.mu-banner-title{
+.mu-banner-title {
   display: block;
   font-size: 48px;
   line-height: 1;
@@ -119,7 +130,7 @@ export default {
   text-align: center;
 }
 
-.mu-banner-sub-title{
+.mu-banner-sub-title {
   color: fade(@alternateTextColor, 87%);
   text-align: center;
   font-weight: 300;
@@ -129,11 +140,11 @@ export default {
   padding-right: 32px;
 }
 
-.mu-banner-button{
+.mu-banner-button {
   color: @primaryColor;
 }
 
-.mu-banner-actions{
+.mu-banner-actions {
   text-align: center;
   font-size: 0;
   display: flex;
@@ -144,7 +155,7 @@ export default {
     margin-left: 12px;
   }
 }
-.mu-desc-wrapper{
+.mu-desc-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,7 +174,7 @@ export default {
   margin-left: 120px;
 }
 
-.mu-desc-title{
+.mu-desc-title {
   font-size: 64px;
   font-weight: 300;
   color: #726b79;
@@ -185,7 +196,7 @@ export default {
   font-weight: 300;
 }
 
-.mu-footer{
+.mu-footer {
   background-color: #1b1b1b;
   text-align: center;
   color: #777777;

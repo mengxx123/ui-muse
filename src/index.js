@@ -55,6 +55,7 @@ import autoComplete from './autoComplete'
 import pagination from './pagination'
 import * as timeLine from './timeLine'
 
+import message from './message'
 import * as grid from './grid'
 
 import * as flexbox from './flexbox'
@@ -125,6 +126,8 @@ const components = {
 }
 
 const install = function (Vue) {
+  Vue.prototype.$message = message
+
   Object.keys(components).forEach((key) => {
     Vue.component(components[key].name, components[key])
   })

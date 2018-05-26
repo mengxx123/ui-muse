@@ -6,7 +6,7 @@ import App from './App.vue'
 import markdownElement from './components/markdownElement'
 import codeExample from './components/codeExample'
 import apiView from './components/apiView'
-import router from './router'
+import router from './router.js'
 import FastClick from 'fastclick'
 import './i18n'
 
