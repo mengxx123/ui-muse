@@ -1,0 +1,47 @@
+@import "../style-scss/import";
+
+.ui-page {
+}
+.ui-page-common {
+    .ui-page-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-left: 0;
+        overflow: hidden;
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .ui-page-header {
+        position: fixed;
+        top: 0;
+        left: 256px;
+        right: 0;
+        z-index: 100;
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .ui-page-body {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 0;
+        overflow: auto;
+    }
+    .ui-page-action-item {
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .ui-container-main {
+        padding-top: 16px;
+    }
+    .ui-page-container {
+        margin: 0 auto;
+        padding: 16px;
+    }
+}

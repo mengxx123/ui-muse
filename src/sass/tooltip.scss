@@ -1,0 +1,42 @@
+@import "../style-scss/import";
+
+.mu-tooltip {
+    position: absolute;
+    font-size: 10px;
+    line-height: 22px;
+    padding: 0 8px;
+    z-index: 300;
+    color: $alternateTextColor;
+    overflow: hidden;
+    top: -1000px;
+    border-radius: 2px;
+    user-select: none;
+    opacity: 0;
+    transition: top 0ms $easeOutFunction 450ms, transform 450ms $easeOutFunction 0ms, opacity 450ms $easeOutFunction 0ms;
+    &.when-shown {
+        opacity: 0.9;
+        transition: top 0ms $easeOutFunction 0ms, transform 450ms $easeOutFunction 0ms, opacity 450ms $easeOutFunction 0ms;
+    }
+    &.touched {
+        font-size: 14px;
+        line-height: 32px;
+        padding: 0 16px;
+    }
+}
+
+.mu-tooltip-ripple {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: width 0ms $easeOutFunction 450ms, height 0ms $easeOutFunction 450ms, background-color 450ms $easeOutFunction 0ms;
+    &.when-shown {
+        background-color: $grey700;
+        transition: width 450ms $easeOutFunction 0ms, height 450ms $easeOutFunction 0ms, background-color 450ms $easeOutFunction 0ms;
+    }
+}
+
+.mu-tooltip-label {
+    white-space: nowrap;
+    position: relative;
+}

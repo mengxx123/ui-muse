@@ -1,0 +1,79 @@
+@import "../style-scss/import";
+
+.mu-flat-button {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    min-width: 88px;
+    transition-duration: 300ms;
+    transition-timing-function: $easeOutFunction;
+    transform: translate3d(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    appearance: none;
+    background: none;
+    color: $textColor;
+    @include flex-shrink(0);
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    &.hover {
+        background-color: rgba($textColor, .1);
+    }
+    &.disabled{
+        color: $disabledColor;
+        cursor: not-allowed;
+        background: none;
+    }
+    .mu-icon {
+        vertical-align: middle;
+        margin-left: 12px;
+        margin-right: 0;
+        + .mu-flat-button-label {
+            padding-left: 8px;
+        }
+
+    }
+    &.no-label .mu-icon {
+        margin-left: 0;
+    }
+    .mu-circle-ripple{
+        color: $textColor;
+    }
+    &.label-before {
+        padding-right: 8px;
+        .mu-icon {
+            margin-right: 4px;
+            margin-left: 0;
+        }
+        .mu-flat-button-label {
+            padding-right: 8px;
+        }
+    }
+}
+.mu-flat-button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.mu-flat-button-primary{
+    color: $primaryColor;
+}
+
+.mu-flat-button-secondary{
+    color: $accentColor;
+}
+
+.mu-flat-button-label{
+    vertical-align: middle;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-size: 14px;
+}

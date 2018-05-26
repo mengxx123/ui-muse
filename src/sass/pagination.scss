@@ -1,0 +1,60 @@
+@import "../style-scss/import";
+
+.mu-pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mu-pagination-svg-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    user-select: none;
+    transition: all 450ms $easeOutFunction;
+}
+
+// pagination item
+.mu-pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 32px;
+    min-width: 32px;
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 32px;
+    margin: 0 8px;
+    transition: all .45s $easeOutFunction;
+    color: $textColor;
+    position: relative;
+    cursor: pointer;
+    border-radius: 2px;
+    &.hover {
+        background-color: rgba(0, 0, 0, .1);
+    }
+    &.active {
+        color: $white;
+        background-color: $primaryColor;
+    }
+    &.disabled {
+        color: $disabledColor;
+        cursor: not-allowed;
+    }
+    &.circle{
+        border-radius: 50%;
+        .mu-ripple-wrapper {
+            border-radius: 50%;
+        }
+    }
+}
+
+.mu-pagination-item-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}

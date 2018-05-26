@@ -1,0 +1,100 @@
+@import "../style-scss/import";
+
+.mu-table {
+    background-color: $alternateTextColor;
+    width: 100%;
+    padding: 0 24px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.mu-td{
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 48px;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mu-th {
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 56px;
+    text-align: left;
+    color: $secondaryTextColor;
+    position: relative;
+}
+
+.mu-th-wrapper{
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mu-caret-wrapper {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: -2px;
+    width: 16px;
+    height: 30px;
+    overflow: visible;
+    overflow: initial;
+}
+
+.mu-arrow-up{
+    position: absolute;
+    margin-left: 3px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.mu-arrow-down{
+    position: absolute;
+    margin-left: 3px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.mu-thead {
+    border-bottom: 1px solid $borderColor;
+}
+
+.mu-tr {
+    border-bottom: 1px solid $borderColor;
+    color: $textColor;
+    height: 48px;
+    &:last-child {
+        border-bottom: none;
+    }
+    &.selected {
+        background-color: $grey100;
+    }
+    &.hover {
+        background-color: $grey200;
+    }
+    &.stripe {
+        background-color: rgba(lighten($primaryColor, 50%), .4);
+    }
+
+    .mu-tfoot & {
+        border-top: 1px solid $borderColor;
+    }
+    .mu-checkbox {
+        vertical-align: middle;
+    }
+}
+
+.mu-checkbox-col {
+    width: 72px;
+}

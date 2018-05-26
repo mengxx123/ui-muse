@@ -1,0 +1,19 @@
+// breadcrumb item
+.mu-breadcrumb-item {
+    &-link {
+        &:hover, &:focus, &:active {
+            i {
+                color: $primaryColor;
+            }
+        }
+    }
+
+    &-current {
+        font-weight: bold;
+    }
+
+    &-separator {
+        margin: 0 8px;
+        color: #d7dde4;
+    }
+}

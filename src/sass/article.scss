@@ -1,0 +1,79 @@
+.ui-article {
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        font-size: 30px;
+    }
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 22px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5,
+    h6 {
+        font-size: 20px;
+    }
+    p {
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+    img {
+        margin-bottom: 16px;
+        max-width: 100%;
+    }
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: decimal;
+    }
+    li {
+        line-height: 1.6;
+        margin-bottom: 8px;
+        list-style-type: inherit;
+    }
+    ul,
+    ol {
+        padding-left: 16px;
+        margin-bottom: 16px;
+        ul,
+        ol {
+            margin-top: 8px;
+            padding-left: 40px;
+        }
+    }
+    ul ul,
+    ol ul {
+        list-style-type: circle;
+    }
+    ol ol ul,
+    ol ul ul,
+    ul ol ul,
+    ul ul ul {
+        list-style-type: square;
+    }
+    table {
+        max-width: 100%;
+        margin-bottom: 16px;
+        th,
+        td {
+            padding: 8px 16px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border: 1px solid #ddd;
+        }
+    }
+    pre code {
+        padding: 16px;
+    }
+}

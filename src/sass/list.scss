@@ -1,0 +1,145 @@
+@import "../style-scss/import";
+
+.mu-list {
+    padding: 8px 0;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+    .mu-sub-header:first-child {
+        margin-top: -8px;
+    }
+}
+
+// List item
+.mu-item-wrapper {
+    display: block;
+    color: inherit;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    &.hover {
+        background-color: rgba($textColor, .1);
+    }
+    &.disabled {
+        cursor: default;
+    }
+}
+
+.mu-item {
+    min-height: 48px;
+    display: flex;
+    padding: 16px 16px;
+    color: $textColor;
+    position: relative;
+    &.show-left {
+        padding-left: 72px;
+    }
+    &.show-right {
+        padding-right: 56px;
+    }
+    &.has-avatar {
+        min-height: 56px;
+    }
+    &.selected {
+        color: $primaryColor;
+    }
+}
+
+.mu-item-toggle-button {
+    position: absolute;
+    color: $textColor;
+    position: absolute;
+    right: 4px;
+    top: 0;
+}
+
+.mu-item-right,
+.mu-item-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    color: $grey600;
+    top: 0;
+    max-height: 72px;
+}
+
+.mu-item-left {
+    left: 16px;
+    .mu-item.selected & {
+        color: $primaryColor;
+    }
+}
+
+.mu-item-right {
+    right: 12px;
+    justify-content: center;
+    > .mu-icon-button {
+        align-self: flex-start;
+    }
+    > .mu-icon-menu {
+        align-self: flex-start;
+    }
+}
+
+.mu-item-content {
+    width: 100%;
+    align-self: center;
+}
+
+.mu-item-title-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    line-height: 1;
+}
+
+.mu-item-title {
+    flex: 1;
+    display: block;
+    font-size: 16px;
+    max-width: 100%;
+}
+
+.mu-item-sub-title {
+    line-height: 1;
+    margin-top: 4px;
+}
+
+.mu-item-after {
+    margin-left: auto;
+    color: $secondaryTextColor;
+    display: flex;
+    align-items: center;
+}
+
+.mu-item-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 4px;
+    max-height: 40px;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    color: $secondaryTextColor;
+}
+
+.mu-item-svg-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    fill: none;
+    stroke: currentColor;
+    user-select: none;
+}

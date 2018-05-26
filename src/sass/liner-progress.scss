@@ -1,0 +1,42 @@
+@import "../style-scss/import";
+
+.mu-linear-progress{
+    position: relative;
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: $lighterPrimaryColor;
+    border-radius: 2px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.mu-linear-progress-indeterminate{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    border-radius: 2px;
+    background-color: $primaryColor;
+    animation: mu-linear-progress-animate 840ms $easeInOutFunction;
+    animation-iteration-count: infinite;
+}
+
+.mu-linear-progress-determinate{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primaryColor;
+    transition: width .3s linear;
+    border-radius: 2px;
+}
+
+@keyframes mu-linear-progress-animate {
+    0% {
+        left: -40%;
+    }
+    100% {
+        left: 100%;
+    }
+}

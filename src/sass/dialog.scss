@@ -1,0 +1,77 @@
+@import "../style-scss/import";
+
+.mu-dialog-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mu-dialog {
+    width: 75%;
+    max-width: 768px;
+    padding: 0;
+    background-color: $dialogBackgroundColor;
+    border-radius: 2px;
+    font-size: 16px;
+    @include depth(5);
+}
+
+.mu-dialog-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 20px;
+    margin: 0;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 32px;
+    color: $textColor;
+    + .mu-dialog-body{
+        padding-top: 0;
+    }
+    &.scrollable{
+        border-bottom: 1px solid $borderColor;
+    }
+}
+.mu-dialog-body {
+    padding: 24px 24px 20px;
+    color: rgba($textColor, .6);
+}
+
+.mu-dialog-actions {
+    min-height: 48px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .mu-raised-button + .mu-raised-button{
+        margin-left: 10px;
+    }
+    &.scrollable{
+        border-top: 1px solid $borderColor;
+    }
+}
+
+.mu-dialog-slide-enter-active,
+.mu-dialog-slide-leave-active{
+    transition: opacity .45s $easeOutFunction;
+    .mu-dialog {
+        backface-visibility: hidden;
+        transition: transform .45s $easeOutFunction;
+    }
+}
+.mu-dialog-slide-enter,
+.mu-dialog-slide-leave-active {
+    opacity: 0;
+}
+
+.mu-dialog-slide-enter .mu-dialog{
+    transform: translate3d(0, -64px, 0);
+}
+.mu-dialog-slide-leave-active .mu-dialog{
+    transform: translate3d(0, 64px, 0);
+}

@@ -1,0 +1,22 @@
+@import "../style-scss/import";
+
+.mu-popover {
+    position: fixed;
+    background: $dialogBackgroundColor;
+    border-radius: 2px;
+    max-height: 100%;
+    overflow: visible;
+    -webkit-overflow-scrolling: touch;
+    @include depth(1);
+    transform-origin: center top;
+}
+
+.mu-popover-enter-active, .mu-popover-leave-active {
+    transition-duration: 300ms;
+    transition-property: opacity, transform;
+}
+
+.mu-popover-enter, .mu-popover-leave-active {
+    transform: scaleY(0);
+    opacity: 0;
+}

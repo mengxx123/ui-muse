@@ -1,0 +1,13 @@
+.mu-auto-complete {
+    display: inline-block;
+    position: relative;
+    width: 256px;
+    &.fullWidth {
+        width: 100%;
+    }
+}
+
+.mu-auto-complete-menu-item {
+    width: 100%;
+    overflow: hidden;
+}

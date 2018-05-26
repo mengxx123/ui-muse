@@ -1,0 +1,102 @@
+@import "../style-scss/import";
+
+.mu-menu {
+    z-index: 90;
+    outline: none;
+}
+
+.mu-menu-list {
+    padding: 8px 0;
+    user-select: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    > .mu-divider {
+        margin: 7px 0px 8px;
+    }
+    > .mu-sub-header {
+        padding-left: 24px;
+        margin-top: -8px
+    }
+}
+
+.mu-menu-destop {
+    padding: 16px 0;
+    > .mu-sub-header {
+        margin-top: -16px;
+    }
+}
+
+// menu item
+.mu-menu-item-wrapper {
+    display: block;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    transition: all .45s $easeOutFunction;
+    color: $textColor;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    .mu-menu-destop & {
+        height: 32px;
+        line-height: 32px;
+        font-size: 15px;
+    }
+    &.hover {
+        background-color: rgba(0, 0, 0, .1);
+    }
+    &.active {
+        color: $accentColor;
+    }
+    &.disabled {
+        color: $disabledColor;
+        cursor: not-allowed;
+    }
+}
+
+.mu-menu-item {
+    padding: 0px 16px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mu-menu-destop & {
+        padding: 0 24px;
+    }
+    &.have-left-icon {
+        padding-left: 72px;
+    }
+}
+
+.mu-menu-item-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.mu-menu-item-left-icon {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    margin: 12px;
+    color: $grey600;
+    .mu-menu-destop & {
+        top: 4px;
+        left: 24px;
+        margin: 0;
+    }
+}
+
+.mu-menu-item-right-icon {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    margin: 12px;
+    color: $grey600;
+    .mu-menu-destop & {
+        top: 4px;
+        right: 24px;
+        margin: 0;
+    }
+}

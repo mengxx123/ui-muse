@@ -1,0 +1,24 @@
+@import "../style-scss/import";
+
+.mu-select-field {
+    .mu-dropDown-menu {
+        display: block;
+        width: 100%;
+        height: 32px;
+    }
+    .mu-dropDown-menu-text {
+        line-height: 32px;
+        height: 32px;
+        padding-left: 0px;
+        padding-right: 24px;
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+    .mu-dropDown-menu-line {
+        display: none;
+    }
+    .mu-dropDown-menu-icon {
+        right: 0;
+        top: 6px;
+    }
+}

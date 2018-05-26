@@ -1,0 +1,14 @@
+@import "../style-scss/import";
+
+.mu-infinite-scroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+    line-height: 36px;
+    width: 100%;
+}
+.mu-infinite-scroll-text{
+    margin-left: 16px;
+    font-size: 16px;
+}

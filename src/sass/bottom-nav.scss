@@ -1,0 +1,28 @@
+@import "../style-scss/import";
+
+.mu-bottom-nav {
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dialogBackgroundColor;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    color: $alternateTextColor;
+}
+
+.mu-bottom-nav-shift {
+    background-color: $primaryColor;
+}
+
+.mu-bottom-nav-shift-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@import "bottom-nav-item";

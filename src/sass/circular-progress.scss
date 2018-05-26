@@ -1,0 +1,17 @@
+@import "../style-scss/import";
+
+.mu-circular-progress {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.mu-circular-progress-determinate {
+    position: relative;
+}
+
+.mu-circular-progress-determinate-path {
+    stroke: $primaryColor;
+    stroke-linecap: round;
+    transition: all 0.3s linear;
+}

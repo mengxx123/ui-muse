@@ -1,0 +1,196 @@
+@import "../style-scss/import";
+
+// text field
+.mu-text-field{
+    font-size: 16px;
+    width: 256px;
+    min-height: 48px;
+    display: inline-block;
+    position: relative;
+    color: $secondaryTextColor;
+    margin-bottom: 8px;
+    &.full-width {
+        width: 100%;
+    }
+    &.has-icon {
+        padding-left: 56px;
+    }
+    &.focus-state {
+        color: $primaryColor;
+        &.error{
+            color: $red;
+        }
+    }
+    &.has-label{
+        min-height: 72px;
+    }
+}
+
+.mu-text-field-icon {
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    .mu-text-field.has-label & {
+        top: 36px;
+    }
+}
+
+.mu-text-field-content{
+    display: block;
+    height: 100%;
+    .mu-text-field.disabled &{
+        color: $disabledColor;
+        cursor: not-allowed;
+    }
+    padding-bottom: 12px;
+    padding-top: 4px;
+    .mu-text-field.has-label &{
+        padding-top: 28px;
+        padding-bottom: 12px;
+    }
+}
+
+.mu-text-field-input{
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 32px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    color: $textColor;
+    font-family: inherit;
+    position: relative;
+}
+
+.mu-text-field-help {
+    position: absolute;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    .mu-text-field.has-icon & {
+        left: 56px;
+    }
+    .mu-text-field.error &{
+        color: $red;
+    }
+    .mu-text-field.disabled &{
+        color: inherit;
+    }
+}
+
+.mu-text-field-hint{
+    position: absolute;
+    opacity: 0;
+    transition: opacity .45s $easeOutFunction;
+    color: $disabledColor;
+    line-height: 34px;
+    user-select: none;
+    cursor: text;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    &.show{
+        opacity: 1;
+    }
+    .mu-text-field.multi-line &{
+        line-height: 1.5;
+    }
+}
+
+.mu-text-field-label {
+    line-height: 20px;
+    transition: all .45s $easeOutFunction;
+    z-index: 1;
+    cursor: text;
+    transform: translate3d(0, 0, 0) scale(0.75);
+    transform-origin: left top;
+    user-select: none;
+    pointer-events: none;
+    backface-visibility: hidden;
+    .mu-text-field.has-label & {
+        top: 8px;
+        position: absolute;
+    }
+    .mu-text-field.has-label &.float {
+        transform: translate3d(0, 28px, 0) scale(1);
+        color: $disabledColor;
+    }
+}
+
+.mu-text-field-line {
+    margin: 0;
+    height: 1px;
+    border: none;
+    background-color: $borderColor;
+    left: 0;
+    right: 0;
+    position: absolute;
+    .mu-text-field.has-icon & {
+        left: 56px;
+    }
+    &.disabled{
+        height: auto;
+        background-color: transparent;
+        border-bottom: 2px dotted $disabledColor;
+    }
+}
+
+.mu-text-field-focus-line{
+    margin: 0;
+    height: 2px;
+    border: none;
+    background-color: $primaryColor;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -1px;
+    transform: scaleX(0);
+    transition: transform .45s $easeOutFunction;
+    .mu-text-field.has-icon & {
+        left: 56px;
+    }
+    &.focus {
+        transform: scaleX(1);
+    }
+    &.error {
+        transform: scaleX(1);
+        background-color: $red;
+
+    }
+}
+
+.mu-text-field-textarea{
+    resize: vertical;
+    line-height: 1.5;
+    position: relative;
+    height: 100%;
+    resize: none;
+}
+.mu-text-field-multiline{
+    width: 100%;
+    position: relative;
+}
+.mu-text-field-textarea-hide{
+    width: 100%;
+    height: initial;
+    resize: none;
+    position: absolute;
+    padding: 0;
+    overflow: auto;
+    visibility: hidden;
+}

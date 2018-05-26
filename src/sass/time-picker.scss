@@ -1,0 +1,240 @@
+@import "../style-scss/import";
+
+.mu-time-picker{
+    display: inline-block;
+    position: relative;
+    width: 256px;
+    &.fullWidth {
+        width: 100%;
+    }
+}
+
+.mu-time-picker-dialog{
+    width: 280px;
+    &.landscape {
+        width: 479px;
+        .mu-dialog-body {
+            min-height: 352px;
+            min-width: 479px;
+        }
+    }
+    .mu-dialog-body {
+        padding: 0;
+        min-height: 450px;
+        min-width: 280px;
+    }
+}
+
+// display
+.mu-time-display {
+    padding: 14px 0px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background-color: $primaryColor;
+    color: $alternateTextColor;
+    .mu-clock-landspace & {
+        width: 179px;
+        position: relative;
+    }
+}
+
+.mu-time-display-text {
+    margin: 6px 0px;
+    line-height: 58px;
+    height: 58px;
+    font-size: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    .mu-clock-landspace & {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 48px;
+
+    }
+}
+
+.mu-time-display-affix {
+    flex: 1 1;
+    position: relative;
+    line-height: 17px;
+    height: 17px;
+    font-size: 17px;
+    .mu-clock-landspace &{
+        flex: none;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.mu-time-display-time {
+    margin: 0px 10px;
+    .mu-clock-landspace & {
+        margin-top: -28px;
+    }
+}
+
+.mu-time-display-clickable {
+    cursor: pointer;
+    &.inactive {
+        opacity: 0.7
+    }
+    .mu-clock-landspace & {
+        margin-top: 8px;
+    }
+}
+
+.mu-time-display-affix-top {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    .mu-clock-landspace &{
+        position: static;
+        order: -1;
+    }
+}
+
+// clock pointer
+.mu-clock-pointer {
+    height: 40%;
+    background-color: $primaryColor;
+    width: 2px;
+    left: calc(50% - 1px);
+    position: absolute;
+    bottom: 50%;
+    transform-origin: center bottom 0px;
+    pointer-events: none;
+    &.inner {
+        height: 30%;
+    }
+}
+
+.mu-clock-pointer-mark {
+    box-sizing: content-box;
+    background-color: $alternateTextColor;
+    border: 4px solid $primaryColor;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: -5px;
+    left: -6px;
+    border-radius: 100%;
+    &.has-selected {
+        display: none;
+    }
+}
+
+// clock number
+.mu-clock-number{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 24px;
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1.1em;
+    pointer-events: none;
+    border-radius: 100%;
+    box-sizing: border-box;
+    transform: translate(0px, 5px);
+    user-select: none;
+    &.selected {
+        background-color: $primaryColor;
+        color: $alternateTextColor;
+    }
+    &.inner {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+// minuters
+.mu-clock-minutes{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    position: relative;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.mu-clock-minutes-mask{
+    height: 100%;
+    width: 100%;
+    pointer-events: auto;
+}
+
+// hour
+.mu-clock-hours{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    position: relative;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.mu-clock-hours-mask{
+    height: 100%;
+    width: 100%;
+    pointer-events: auto;
+}
+
+// clock
+.mu-clock {
+    user-select: none;
+    width: 280px;
+}
+
+.mu-clock-landspace{
+    width: 479px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mu-clock-container {
+    height: 280px;
+    padding: 10px;
+    position: relative;
+    box-sizing: content-box;
+    position: relative;
+    padding-bottom: 62px;
+    .mu-clock-landspace & {
+        width: 300px;
+    }
+}
+
+.mu-clock-circle {
+    position: absolute;
+    top: 20px;
+    width: 260px;
+    height: 260px;
+    border-radius: 100%;
+    background-color: rgba($darkBlack, .7);
+    .mu-clock-landspace &{
+        left: 50%;
+        margin-left: -130px;
+    }
+}
+
+.mu-clock-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
