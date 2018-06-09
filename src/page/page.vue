@@ -114,9 +114,10 @@
             }
         },
         mounted() {
-            this.embed = this.$route.query.embed
-            console.log('this.embed')
-            console.log(this.embed)
+            // let isInFrame = window.frames.length !== window.parent.frames.length
+            let isInFrame = window.self !== window.top
+            this.embed = this.$route.query.embed === 'true' && isInFrame
+            console.log('embed', this.embed)
             document.title = this.title || this.page.title
             this.isPc = window.innerWidth > 1000
             if (!this.isPc) {
