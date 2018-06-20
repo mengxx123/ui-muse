@@ -1,5 +1,10 @@
 <template>
     <ui-page class="page-demo" title="这是标题" :page="page" :drawer-default-visible="false">
+        <ui-appbar>
+            <ui-icon-button icon="help" slot="right">
+            </ui-icon-button>
+            <ui-icon-button icon="close" slot="left" />
+        </ui-appbar>
         <div slot="drawer">
             <ui-list>
                 <ui-list-item title="Inbox">
@@ -16,6 +21,17 @@
                 <div>1212</div>
                 <div>1212</div>
             </abstract-button>
+        </div>
+        <h2>Badge</h2>
+        <div>
+            <ui-badge content="444" primary>
+                <div slot="content">1212121212</div>
+            </ui-badge>
+            <span class="ui-badge ui-badge-primary">采购</span>
+            <span class="ui-badge ui-badge-secondary">采购</span>
+            <span class="ui-badge ui-badge-success">采购</span>
+            <span class="ui-badge ui-badge-warning">采购</span>
+            <span class="ui-badge ui-badge-danger">采购</span>
         </div>
         <div slot="header_right">1212</div>
         <h2>按钮</h2>
