@@ -1,16 +1,16 @@
 @import "../style-scss/import";
 
-.mu-menu {
+.ui-menu {
     z-index: 90;
     outline: none;
 }
 
-.mu-menu-list {
+.ui-menu-list {
     padding: 8px 0;
     user-select: none;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    > .mu-divider {
+    > .ui-divider {
         margin: 7px 0px 8px;
     }
     > .mu-sub-header {
@@ -19,7 +19,7 @@
     }
 }
 
-.mu-menu-destop {
+.ui-menu-destop {
     padding: 16px 0;
     > .mu-sub-header {
         margin-top: -16px;
@@ -27,7 +27,7 @@
 }
 
 // menu item
-.mu-menu-item-wrapper {
+.ui-menu-item-wrapper {
     display: block;
     font-size: 16px;
     height: 48px;
@@ -37,7 +37,7 @@
     position: relative;
     cursor: pointer;
     user-select: none;
-    .mu-menu-destop & {
+    .ui-menu-destop & {
         height: 32px;
         line-height: 32px;
         font-size: 15px;
@@ -54,13 +54,13 @@
     }
 }
 
-.mu-menu-item {
+.ui-menu-item {
     padding: 0px 16px;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .mu-menu-destop & {
+    .ui-menu-destop & {
         padding: 0 24px;
     }
     &.have-left-icon {
@@ -68,33 +68,33 @@
     }
 }
 
-.mu-menu-item-title {
+.ui-menu-item-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
 }
 
-.mu-menu-item-left-icon {
+.ui-menu-item-left-icon {
     position: absolute;
     top: 0;
     left: 4px;
     margin: 12px;
     color: $grey600;
-    .mu-menu-destop & {
+    .ui-menu-destop & {
         top: 4px;
         left: 24px;
         margin: 0;
     }
 }
 
-.mu-menu-item-right-icon {
+.ui-menu-item-right-icon {
     position: absolute;
     top: 0;
     right: 4px;
     margin: 12px;
     color: $grey600;
-    .mu-menu-destop & {
+    .ui-menu-destop & {
         top: 4px;
         right: 24px;
         margin: 0;

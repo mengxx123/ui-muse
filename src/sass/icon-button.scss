@@ -29,4 +29,10 @@
         color: $disabledColor;
         cursor: not-allowed;
     }
+    &:hover {
+        .mu-ripple-wrapper {
+            background-color: rgba(200, 200, 200, .1);
+            border-radius: 50%;
+        }
+    }
 }

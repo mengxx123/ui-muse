@@ -1,22 +1,19 @@
 @import "../style-scss/import";
 
 .ui-page {
+    height: 100%;
+    //position: fixed;
+    //top: 0;
+    //left: 0;
+    //right: 0;
+    //bottom: 0;
 }
 .ui-page-common {
-    .ui-page-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding-left: 0;
-        overflow: hidden;
-        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-    }
     .ui-page-header {
         position: fixed;
         top: 0;
-        left: 256px;
+        //left: 256px;
+        left: 0;
         right: 0;
         z-index: 100;
         transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
@@ -31,6 +28,26 @@
         padding-top: 0;
         overflow: auto;
     }
+    .ui-page-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-left: 0;
+        overflow: hidden;
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .ui-page-side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 255px;
+        right: 0;
+        bottom: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    }
     .ui-page-action-item {
         margin-left: 8px;
         display: flex;
@@ -43,5 +60,9 @@
     .ui-page-container {
         margin: 0 auto;
         padding: 16px;
+    }
+    .ui-page-drawer {
+        position: fixed;
+        //z-index: 100000000;
     }
 }
