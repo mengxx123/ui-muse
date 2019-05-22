@@ -1,0 +1,26 @@
+input,
+textarea {
+  -webkit-appearance: none;
+}
+
+
+.ui-paper,
+.mu-paper {
+	box-shadow: rgba(0, 0, 0, 0.118) 0px 1px 6px, rgba(0, 0, 0, 0.118) 0px 1px 4px;
+}
+.mu-drawer {
+	background-color: #fff;
+}
+/*.ui-page-body {
+    -webkit-overflow-scrolling : touch;
+}*/
+input,
+textarea {
+  -webkit-appearance: none;
+}
+.ui-message {
+  display: flex;
+  // max-width: 360px;
+  min-width: 40px;
+  height: auto;
+}

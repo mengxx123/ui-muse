@@ -1,6 +1,4 @@
-@import "../style-scss/import";
-
-.ui-page {
+.yui-page {
     height: 100%;
     //position: fixed;
     //top: 0;
@@ -8,9 +6,9 @@
     //right: 0;
     //bottom: 0;
 }
-.ui-page-common {
-    .ui-page-header {
-        position: fixed;
+.yui-page-common {
+    .yui-page-header {
+        position: fixed; 
         top: 0;
         //left: 256px;
         left: 0;
@@ -18,29 +16,29 @@
         z-index: 100;
         transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
     }
-    .ui-page-body {
-        position: absolute;
-        top: 64px;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    .yui-page-body {
+        // position: absolute;
+        // top: 64px;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
         width: 100%;
-        padding-top: 0;
+        padding-top: 64px;
         overflow: auto;
     }
-    .ui-page-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding-left: 0;
+    .yui-page-content {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
+        padding-left: 256px;
         overflow: hidden;
         transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
     }
-    .ui-page-side {
-        position: absolute;
-        top: 0;
+    .yui-page-side {
+        position: fixed;
+        top: 64px;
         left: 0;
         width: 255px;
         right: 0;
@@ -48,7 +46,7 @@
         border-right: 1px solid rgba(0, 0, 0, 0.12);
         transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
     }
-    .ui-page-action-item {
+    .yui-page-action-item {
         margin-left: 8px;
         display: flex;
         align-items: center;
@@ -57,12 +55,12 @@
     .ui-container-main {
         padding-top: 16px;
     }
-    .ui-page-container {
+    .yui-page-container {
         margin: 0 auto;
         padding: 16px;
     }
-    .ui-page-drawer {
-        position: fixed;
+    .yui-page-drawer {
+        // position: fixed;
         //z-index: 100000000;
     }
 }

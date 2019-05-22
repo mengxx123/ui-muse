@@ -6,15 +6,15 @@
   color: #ffffff;
   background-color: #bdbdbd;
 }
-.mu-badge {
+.ui-badge {
   background-color: #bdbdbd;
   color: #ffffff;
 }
-.mu-badge-primary {
+.ui-badge-primary {
   background-color: #009688;
   color: #ffffff;
 }
-.mu-badge-secondary {
+.ui-badge-secondary {
   background-color: #ff4081;
   color: #ffffff;
 }
@@ -261,22 +261,22 @@ a {
 .mu-item-text {
   color: rgba(0, 0, 0, 0.54);
 }
-.mu-menu-item-wrapper {
+.ui-menu-item-wrapper {
   color: rgba(0, 0, 0, 0.87);
 }
-.mu-menu-item-wrapper.active {
+.ui-menu-item-wrapper.active {
   color: #ff4081;
 }
-.mu-menu-item-wrapper.hover {
+.ui-menu-item-wrapper.hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.mu-menu-item-wrapper.disabled {
+.ui-menu-item-wrapper.disabled {
   color: rgba(0, 0, 0, 0.38);
 }
-.mu-menu-item-left-icon {
+.ui-menu-item-left-icon {
   color: #757575;
 }
-.mu-menu-item-right-icon {
+.ui-menu-item-right-icon {
   color: #757575;
 }
 .mu-pagination-item {
@@ -292,7 +292,7 @@ a {
 .mu-pagination-item.disabled {
   color: rgba(0, 0, 0, 0.38);
 }
-.mu-paper {
+.ui-paper {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.87);
 }
